@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4sa-dF-fkI">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--On Boarding Container View Controller-->
+        <scene sceneID="5xO-wP-x0p">
+            <objects>
+                <viewController id="4sa-dF-fkI" customClass="OnBoardingContainerViewController" customModule="Test1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BRt-pD-2JT">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aNz-oQ-04z">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DQJ-c5-Ioa">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <connections>
+                                    <segue destination="nl7-ZO-G6q" kind="embed" identifier="openOnBoarding" id="sUG-so-vh7"/>
+                                </connections>
+                            </containerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W9g-Lg-K6d">
+                                <rect key="frame" x="20" y="511" width="280" height="37"/>
+                                <color key="backgroundColor" name="BkueColor"/>
+                                <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="21"/>
+                                <state key="normal" title="Iniciar">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadio">
+                                        <integer key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="vf8-qq-zLu" kind="presentation" identifier="Sign In" id="dsZ-O6-k5o"/>
+                                </connections>
+                            </button>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="qHZ-Py-Ttg">
+                                <rect key="frame" x="140.5" y="391" width="39" height="37"/>
+                                <color key="pageIndicatorTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="currentPageIndicatorTintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </pageControl>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="8oc-ht-8MP" firstAttribute="bottom" secondItem="W9g-Lg-K6d" secondAttribute="bottom" constant="20" id="0kR-c9-PkS"/>
+                            <constraint firstItem="W9g-Lg-K6d" firstAttribute="top" secondItem="qHZ-Py-Ttg" secondAttribute="bottom" constant="83" id="7Ef-P8-MeT"/>
+                            <constraint firstItem="aNz-oQ-04z" firstAttribute="leading" secondItem="8oc-ht-8MP" secondAttribute="leading" id="CIs-6g-xcP"/>
+                            <constraint firstAttribute="bottom" secondItem="aNz-oQ-04z" secondAttribute="bottom" id="EK8-i7-7v7"/>
+                            <constraint firstItem="8oc-ht-8MP" firstAttribute="trailing" secondItem="aNz-oQ-04z" secondAttribute="trailing" id="YOw-SQ-agX"/>
+                            <constraint firstItem="W9g-Lg-K6d" firstAttribute="leading" secondItem="8oc-ht-8MP" secondAttribute="leading" constant="20" id="hN7-Zk-2k6"/>
+                            <constraint firstItem="W9g-Lg-K6d" firstAttribute="top" secondItem="qHZ-Py-Ttg" secondAttribute="bottom" constant="83" id="jVk-R3-UNs"/>
+                            <constraint firstItem="8oc-ht-8MP" firstAttribute="trailing" secondItem="W9g-Lg-K6d" secondAttribute="trailing" constant="20" id="ugB-en-Y3j"/>
+                            <constraint firstItem="aNz-oQ-04z" firstAttribute="top" secondItem="BRt-pD-2JT" secondAttribute="top" id="utA-p0-Mtf"/>
+                            <constraint firstItem="qHZ-Py-Ttg" firstAttribute="centerX" secondItem="BRt-pD-2JT" secondAttribute="centerX" id="xPL-By-nq9"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="8oc-ht-8MP"/>
+                    </view>
+                    <connections>
+                        <outlet property="pageControl" destination="qHZ-Py-Ttg" id="MVd-xj-uQq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gaD-ct-ZZd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-682.5" y="106.69014084507042"/>
+        </scene>
+        <!--SignIn-->
+        <scene sceneID="PSc-1u-R3y">
+            <objects>
+                <viewControllerPlaceholder storyboardName="SignIn" id="vf8-qq-zLu" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sE2-xa-Zjf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-674" y="579"/>
+        </scene>
+        <!--On Boarding View Controller-->
+        <scene sceneID="g2Y-39-h4S">
+            <objects>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="nl7-ZO-G6q" customClass="OnBoardingViewController" customModule="Test1" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nHT-KR-qvI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="164" y="105"/>
+        </scene>
+        <!--On Boarding Steps View Controller-->
+        <scene sceneID="EsZ-up-xvp">
+            <objects>
+                <viewController storyboardIdentifier="OnBoardingSteps" useStoryboardIdentifierAsRestorationIdentifier="YES" id="hCa-cw-Dcx" customClass="OnBoardingStepsViewController" customModule="Test1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1G2-Vp-ZpU">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="g83-Bt-19z">
+                                <rect key="frame" x="60" y="44" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="7XI-Rg-5WL"/>
+                                    <constraint firstAttribute="height" constant="200" id="zoH-3g-mp0"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZkS-pq-1bU">
+                                <rect key="frame" x="20" y="264" width="280" height="33"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="30"/>
+                                <color key="textColor" name="BkueColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e0u-9T-VE7">
+                                <rect key="frame" x="20" y="317" width="280" height="18.5"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
+                                <color key="textColor" name="GrayColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ZkS-pq-1bU" firstAttribute="leading" secondItem="eDS-py-qYg" secondAttribute="leading" constant="20" id="1J3-YZ-RZL"/>
+                            <constraint firstItem="eDS-py-qYg" firstAttribute="trailing" secondItem="ZkS-pq-1bU" secondAttribute="trailing" constant="20" id="5FP-Gn-df2"/>
+                            <constraint firstItem="e0u-9T-VE7" firstAttribute="top" secondItem="ZkS-pq-1bU" secondAttribute="bottom" constant="20" id="AFv-GU-0Iz"/>
+                            <constraint firstItem="g83-Bt-19z" firstAttribute="centerY" secondItem="1G2-Vp-ZpU" secondAttribute="centerY" constant="-140" id="JeW-Ig-KTL"/>
+                            <constraint firstItem="g83-Bt-19z" firstAttribute="centerX" secondItem="1G2-Vp-ZpU" secondAttribute="centerX" id="PRM-LL-SId"/>
+                            <constraint firstItem="ZkS-pq-1bU" firstAttribute="top" secondItem="g83-Bt-19z" secondAttribute="bottom" constant="20" id="bgH-BM-hGO"/>
+                            <constraint firstItem="e0u-9T-VE7" firstAttribute="leading" secondItem="eDS-py-qYg" secondAttribute="leading" constant="20" id="mwK-R9-ixm"/>
+                            <constraint firstAttribute="trailing" secondItem="e0u-9T-VE7" secondAttribute="trailing" constant="20" id="xke-WV-Oz4"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="eDS-py-qYg"/>
+                    </view>
+                    <connections>
+                        <outlet property="descriptionLabel" destination="e0u-9T-VE7" id="3ri-0m-bAj"/>
+                        <outlet property="onBoaringImage" destination="g83-Bt-19z" id="A9X-3X-NMS"/>
+                        <outlet property="titleLabel" destination="ZkS-pq-1bU" id="jVV-cs-Ddc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vQW-1Q-e2F" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1076" y="92"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="BkueColor">
+            <color red="0.25490196078431371" green="0.6588235294117647" blue="0.95294117647058818" alpha="0.59600001573562622" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="GrayColor">
+            <color red="0.28235294117647058" green="0.52156862745098043" blue="0.55686274509803924" alpha="0.5130000114440918" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
